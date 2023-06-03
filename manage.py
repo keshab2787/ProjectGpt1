@@ -7,6 +7,7 @@ import sys
 def main():
     """Run administrative tasks."""
     os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'ProjectGpt1.settings')
+    os.environ["DJANGO_LIVE_TEST_SERVER_ADDRESS"] = "localhost:6077"
     try:
         from django.core.management import execute_from_command_line
     except ImportError as exc:
